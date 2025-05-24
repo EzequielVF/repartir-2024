@@ -46,7 +46,6 @@ public class GruposService {
 
         if (Strings.isBlank(nuevoGrupo.getNombre())) {
             throw new GrupoInvalidoException();
-
         }
     }
 

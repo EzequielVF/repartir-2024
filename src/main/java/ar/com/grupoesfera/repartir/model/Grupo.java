@@ -68,7 +68,12 @@ public class Grupo {
     }
 
     public boolean estaFormado() {
+        return (miembros != null) && (miembros.size() > 1) && !hasRepeatedMembers();
+    }
 
-        return (miembros != null) && (miembros.size() > 1);
+    private boolean hasRepeatedMembers() {
+        int uniqueMembers = new java.util.HashSet<>(this.miembros).size();
+        int totalMembers = this.miembros.size();
+        return uniqueMembers != totalMembers;
     }
 }

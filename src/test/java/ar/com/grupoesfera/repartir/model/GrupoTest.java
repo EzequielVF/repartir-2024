@@ -64,7 +64,6 @@ class GrupoTest {
         assertThat(grupo.estaFormado()).isFalse();
     }
 
-    @Disabled("To-Do: Implementar")
     @Test
     void noEstaFormadoCuandoTieneMiembrosRepetidos() {
         Grupo grupo = new Grupo();

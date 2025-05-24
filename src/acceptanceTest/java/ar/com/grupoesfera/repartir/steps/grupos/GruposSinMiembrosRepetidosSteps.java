@@ -35,7 +35,7 @@ public class GruposSinMiembrosRepetidosSteps extends CucumberSteps {
         var wait = new WebDriverWait(driver, 2);
         var mensajesToast = wait.withMessage("No salto el alert").until(visibilityOfElementLocated(By.id("mensajesToast")));
         wait.withMessage("El titulo de la alerta no es 'Error'").until(textToBePresentInElement(mensajesToast, "Error"));
-        assertThat(mensajesToast.getText()).as("Texto del alert").contains("No se puede crear");
+        assertThat(mensajesToast.getText()).as("Texto del alert").contains("No se puede guardar");
     }
 
     @Cuando("el usuario crea un grupo con un miembro llamado {string} y 2 miembros llamados {string}")
