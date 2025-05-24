@@ -1,5 +1,6 @@
 package ar.com.grupoesfera.repartir.model;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -60,6 +61,14 @@ class GrupoTest {
 
         grupo.setMiembros(null);
 
+        assertThat(grupo.estaFormado()).isFalse();
+    }
+
+    @Disabled("To-Do: Implementar")
+    @Test
+    void noEstaFormadoCuandoTieneMiembrosRepetidos() {
+        Grupo grupo = new Grupo();
+        grupo.setMiembros(Arrays.asList("Ezequiel", "Ezequiel"));
         assertThat(grupo.estaFormado()).isFalse();
     }
 }
